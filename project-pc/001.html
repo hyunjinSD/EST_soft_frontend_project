@@ -86,7 +86,7 @@
         height: 50px;
         top: 26px;
         left: 1100px;
-        border-radius: 40px 0px 0px 0px;
+        border-radius: 40px;
       }
       .big_lorem {
         position: relative;
@@ -186,6 +186,9 @@
         line-height: 20px;
         text-align: center;
         letter-spacing: -0.3px;
+      }
+      .color {
+        color: #d97652;
       }
       .threecat {
         position: relative;
@@ -294,7 +297,7 @@
       .btn-up {
         width: 60px;
         height: 60px;
-        top: 380px;
+        top: 192px;
         left: 1842px;
         position: relative;
         border-radius: 50%;
@@ -310,13 +313,13 @@
         position: relative;
         width: 226px;
         height: 70px;
-        top: 385px;
+        top: 200px;
       }
       .icon {
         position: relative;
         width: 228px;
         height: 42px;
-        top: 330px;
+        top: 145px;
         left: 1050px;
       }
       .blogpost {
@@ -352,6 +355,97 @@
         line-height: 18px;
         text-align: left;
         color: #f2e9d8;
+      }
+      .enterbox {
+        position: relative;
+        width: 530px;
+        height: 60px;
+        top: 55px;
+        left: 1010px;
+        border-radius: 60px;
+      }
+      .mail {
+        position: relative;
+        width: 24px;
+        height: 24px;
+        top: 13px;
+        left: 1040px;
+      }
+      .enter {
+        position: relative;
+        width: 184px;
+        height: 20px;
+        top: -59px;
+        left: 1078px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 20px;
+        text-align: left;
+        color: #767676;
+        white-space: nowrap;
+      }
+      .sub_icon {
+        position: relative;
+        width: 135px;
+        height: 50px;
+        top: -27px;
+        left: 1370px;
+        border-radius: 40px;
+      }
+      .img {
+        width: 600px;
+        height: 400px;
+      }
+      .modal {
+        width: 600px;
+        height: 400px;
+        top: 3627px;
+        left: 1000px;
+        border-radius: 30px;
+        position:absolute;
+         display:none;
+        justify-content: center;
+      }
+      .modal-cat {
+        position: relative;
+        width: 110px;
+        height: 112px;
+        top: 60px;
+        left: -350px;
+      }
+      .tky {
+        position: relative;
+        width: 212px;
+        height: 46px;
+        top: 196px;
+        left: -1045px;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 45px;
+        text-align: center;
+        white-space: nowrap;
+        color: #d97652;
+      }
+      .modal-lorem {
+        position: relative;
+        width: 365px;
+        height: 18px;
+        top: 254px;
+        left: -765px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 18px;
+        text-align: center;
+        white-space: nowrap;
+        letter-spacing: -0.3px;
+      }
+      .modal-btn {
+        position: relative;
+        width: 183px;
+        height: 50px;
+        top: 311px;
+        left: -500px;
+        border-radius: 40px;
       }
     </style>
   </head>
@@ -430,7 +524,7 @@
           </div>
           <div class="small_dummy">
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
+              Lorem Ipsum is simply <span class="color">dummy text</span> of the printing and typesetting
               industry.<br />
               Lorem Ipsum has been the industry's standard dummy text ever since
               the 1500s, when an unknown
@@ -500,10 +594,50 @@
           </div>
         </div>
         <div class="subscribe">
-            <div class="mail"></div>
-            <div class="sub_icon"></div>
-            <div class="enter"></div>
+            <div class="enterbox">
+                <img src="./enter-email-Box.png" alt="enter-email-Box">
+            </div>
+            <div class="mail">
+                <img src="./mail.svg" alt="mail-icon">
+            </div>
+            <div class="sub_icon">
+                <button class= modalbtn> <img src="./Subscribe_btn.png" alt="Subscribe_btn"></button>
+                
+            </div>
+            <div class="enter">
+                <span>Enter your e-mail address</span>
+            </div>
+          </div>    
+          <div class="modal">
+            <div class="img">
+              <img src="./무제-1 1.png" alt="배경" />
+            </div>
+            <div class="modal-cat">
+              <img src="./cat 1.png" alt="cat" />
+            </div>
+            <div class="modal-btn">
+              <button class="ok-btn"><img src="./ok-btn.png" alt="ok-btn" />
+              </button>
+            </div>
+            <div class="modal-lorem">
+              <p>Lorem Ipsum is simply dummy text of the printing industry.</p>
+            </div>
+            <div class="tky">
+              <span>Thank you!</span>
+            </div>
           </div>
+          <script>
+            const modal = document.querySelector('.modal');
+            const btnmodal = document.querySelector('.modalbtn');
+            
+            btnmodal.addEventListener("click", ()=>{
+                modal.style.display="flex";
+            });           
+            const btnok = modal.querySelector('.ok-btn');
+            btnok.addEventListener("click", ()=>{
+                modal.style.display="none";
+            });
+          </script>
         <div class="btn-up">
           <button
             onclick="window.scrollTo(0, 0);"
