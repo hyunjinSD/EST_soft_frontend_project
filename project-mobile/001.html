@@ -467,6 +467,87 @@
         left: -332px;
         border-radius: 40px;
       }
+      .mobile2 {
+        position: relative;
+        width: 289px;
+        height: 820px;
+        top: -4450px;
+        left: 600px;
+        background-color: #263140;
+      }
+      .status-bar2 {
+        position: relative;
+        width: 390px;
+        height: 24px;
+        top: -151px;
+        left: -101px;
+      }
+      .arrow2 {
+        position: relative;
+        width: 32px;
+        height: 32px;
+        top: 22px;
+        left: 20px;
+      }
+      .home2 {
+        position: relative;
+        width: 45px;
+        height: 20px;
+        top: 120px;
+        left: 50px;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 20px;
+        text-align: left;
+        color: white;
+      }
+      .about2 {
+        position: relative;
+        width: 47px;
+        height: 20px;
+        top: 170px;
+        left: 50px;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 20px;
+        text-align: left;
+        color: white;
+      }
+      .support2 {
+        position: relative;
+        width: 62px;
+        height: 20px;
+        top: 220px;
+        left: 50px;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 20px;
+        text-align: left;
+        color: white;
+      }
+      .download-btn2 {
+        position: relative;
+        width: 114px;
+        height: 40px;
+        top: 290px;
+        left: 40px;
+        border-radius: 40px;
+      }
+      .mobile2 {
+        display: none;
+      }
+      .arrow-btn {
+      background-color: #263140;;
+      }
+      .icon-btn {
+        background-color: #f2e9d8;
+      }
+      .subscribe-btn {
+        background-color: #263140;
+      }
+      .hodu-btn {
+        background-color: #f2e9d8;
+      }
     </style>
   </head>
   <body>
@@ -480,7 +561,7 @@
             <img src="./Logo-fin.svg" alt="HODU" />
           </div>
           <div class="icon1">
-            <img src="./menu.svg" alt="menu" />
+            <button class="icon-btn"><img src="./menu.svg" alt="menu" /></button>
           </div>
         </div>
         <div class="lorem3">
@@ -506,15 +587,6 @@
         <div class="box-cat">
           <img src="./고양이 1.png" alt="cat" />
         </div>
-      </div>
-      <div class="mobile2">
-        <div class="arrow"></div>
-        <div class="nav">
-          <div class="home1"></div>
-          <div class="about1"></div>
-          <div class="support1"></div>
-        </div>
-        <div class="down-btn2"></div>
       </div>
       <div class="picture">
         <div class="bad-cat">
@@ -676,18 +748,58 @@
             </p>
           </div>
           <div class="more-btn">
-            <img src="./Learn More-btn1.png" alt="hodu-btn" />
+            <button class="hodu-btn">
+              <img src="./Learn More-btn1.png" alt="hodu-btn" />
+            </button>
           </div>
           <script>
-            const modalm = document.querySelector('.modal1');
-            const modalbtnm = document.querySelector('.subscribe-btn');
+            const modalm = document.querySelector(".modal1");
+            const modalbtnm = document.querySelector(".subscribe-btn");
 
-            modalbtnm.addEventListener("click", ()=>{
-                modalm.style.display="flex";
-              }); 
+            modalbtnm.addEventListener("click", () => {
+              modalm.style.display = "flex";
+            });
+            const btnhodu = modalm.querySelector(".hodu-btn");
+            btnhodu.addEventListener("click", () => {
+              modalm.style.display = "none";
+            });
           </script>
         </div>
       </div>
+      <div class="mobile2">
+        <div class="menu-tab">
+          <div class="arrow2">
+           <button class="arrow-btn"> <img src="./arrow-right.svg" alt="arrow-right" /></button>
+          </div>
+          <div class="home2">
+            <span>Home</span>
+          </div>
+          <div class="about2">
+            <span>About</span>
+          </div>
+          <div class="support2">
+            <span>Support</span>
+          </div>
+          <div class="download-btn2">
+            <img src="./Download_btn.png" alt="download-btn2" />
+          </div>
+          <div class="status-bar2">
+            <img src="./status-bar.png" alt="status-bar2" />
+          </div>
+        </div>
+      </div>
+      <script>
+        const mobile2 = document.querySelector(".mobile2");
+        const iconbtn = document.querySelector(".icon-btn");
+
+        iconbtn.addEventListener("click", () => {
+          mobile2.style.display = "flex";
+        });
+        const arrowbtn = mobile2.querySelector(".arrow-btn");
+        arrowbtn.addEventListener("click", () => {
+          mobile2.style.display = "none";
+        });
+      </script>
     </div>
   </body>
 </html>
