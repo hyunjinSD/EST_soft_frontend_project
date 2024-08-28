@@ -18,3 +18,7 @@
 * 처음으로 해 본 프로젝트여서 많이 부족하다고 느꼈고, 많은 경험을 쌓아야겠다고 생각했습니다. 
 ### 결과물
 ------
+#### pc
+![pc](https://github.com/hyunjinSD/EST_soft_frontend_project/blob/main/pc.png)
+#### mobile
+![mobile](https://github.com/hyunjinSD/EST_soft_frontend_project/blob/main/mobile.png)
