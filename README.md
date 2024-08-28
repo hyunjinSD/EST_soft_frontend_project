@@ -7,7 +7,7 @@
 * lorem 문단을 작성할 때 줄 바꿈이 마음대로 되지 않았지만, css에 white-space: nowrap 스타일을 주고 줄바꿈 하고 싶은 부분에 <br> 을 사용하여 해결하였습니다.
 * 사이트의 최상단으로 이동하는 버튼은 검색을 통해 window.scrollTo 를 사용하여 x,y 좌표를 0으로 설정 해 주었고 behavior: 'smooth' 를 사용하여 효과를 부드럽게 해주었습니다.
 * button 태그를 지정하니 버튼 이미지에 틀이 생기는 걸 발견해서 검색 후 틀을 지우는 border:none 을 적용 해봤지만 적용되지 않아 버튼 이미지의 background-color를 배경의 background-color와 동일한 색상으로 지정해주므로써 틀의 이질감을 조금이라도 없애기 위해 시도해봤습니다.
-*modal 창은 검색을 통해 document.querySelector 를 사용하여 요소를 반환 해주고 addEventListener 를 사용하여 click 이벤트를 생성해 버튼을 클릭하면 display = "flex"를, 
+* modal 창은 검색을 통해 document.querySelector 를 사용하여 요소를 반환 해주고 addEventListener 를 사용하여 click 이벤트를 생성해 버튼을 클릭하면 display = "flex"를, 
   닫기 버튼을 클릭하면 display = "none"을 주어서 해결하였습니다.(modal)
 ### 프로젝트 회고
 -----
